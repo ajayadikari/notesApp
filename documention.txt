@@ -1,0 +1,62 @@
+*******************************Detailed documentation*************************
+
+*********How to run the code(for windows)**************
+1. open vs code in your local system
+2. open terminal
+3. use command "npm run dev" to run the code
+4. runs on portno.8000
+
+*********Api documention***************
+******auth******
+
+******Test API's in post*******
+
+
+
+***auth api's***
+
+***register***
+1. http://localhost:8000/api/v1/auth/register
+2. send name and email in the body
+3. body format - {"name": "ajay", "email": "ajay1@gmail.com"}
+4. these both details are required to register and no password is required
+
+***login***
+1. http://localhost:8000/api/v1/auth/login
+2. send your registered email in body to get login
+3. store the token somewhere, it is neccessary to access other pages
+
+
+***notes api's***
+
+***you should be registered and logged in to perform these API'S****
+
+
+***notes creation api***
+1. http://localhost:8000/api/v1/notes/create-note/:id
+2. send your id in the parameters
+3. send the title and content in the body
+4. format - {
+    "title": "notes tilte", 
+    "content": "notes content"
+}
+5. tilte should be min of 10 characters
+
+
+***to get all your notes***
+1. http://localhost:8000/api/v1/notes/get-notes/:id
+2. send your id in the parameters
+
+***to get your single note***
+1. http://localhost:8000/api/v1/notes/get-notes/:userId/:noteId
+2. send your userid and the noteid to get a specific note of you
+
+
+***to update note***
+1. http://localhost:8000/api/v1/notes/update-notes/:userId/:noteId
+2. send your userid and the noteid to update a specific note of you
+
+***to delete note***
+
+1. http://localhost:8000/api/v1/notes/delete-notes/:userId/:noteId
+2. send your userid and the noteid to delete a specific note of you
